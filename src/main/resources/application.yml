@@ -1,0 +1,27 @@
+
+spring:
+  application:
+    name: telegram-news
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5450/postgres
+  liquibase:
+    change-log: classpath:db/migration/changelog.xml
+
+telegram:
+  app:
+    language: ru
+    device: Dekstop
+    app-version: 0.1
+  bot:
+    name: CiconiaNewsBot
+
+message:
+  brief:
+    max-size: 20
+
+secret:
+  root: /Users/dmitry.chernov/Documents/Projects/news/tg-news/secret
+
+yandex:
+  catalog-id: b1gtiaocmtgk7rncao3t

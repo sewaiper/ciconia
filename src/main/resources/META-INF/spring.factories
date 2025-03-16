@@ -1,0 +1,5 @@
+org.springframework.boot.env.EnvironmentPostProcessor=\
+ru.sewaiper.ciconia.configuration.secret.SecretEnvironmentPostProcessor
+
+org.springframework.data.jdbc.repository.config.DialectResolver$JdbcDialectProvider=\
+ru.sewaiper.ciconia.configuration.sqlite.SQLiteDialectResolver

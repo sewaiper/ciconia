@@ -1,0 +1,25 @@
+spring:
+  profiles:
+    active:
+      - test
+  application:
+    name: telegram-news
+  datasource:
+    driver-class-name: org.postgresql.Driver
+  liquibase:
+    change-log: classpath:db/migration/changelog.xml
+
+telegram:
+  app:
+    language: ru
+    device: Dekstop
+    app-version: 0.1
+  bot:
+    name: CiconiaNewsBot
+
+yandex:
+  catalog-id: b1gtiaocmtgk7rncao3t
+
+message:
+  brief:
+    max-size: 10
