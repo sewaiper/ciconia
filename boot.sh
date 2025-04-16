@@ -2,9 +2,7 @@
 
 JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk-21.jdk/Contents/Home
 TDLIB=~/td
-PROJECT_ROOT=~/ciconia
-
-cd $TDLIB
+PROJECT_ROOT=/Users/dmitry.chernov/Documents/Projects/news/ciconia
 
 rm -rf build
 mkdir build
@@ -31,7 +29,7 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DJAVA_HOME=$JAVA_HOME \
       -DOPENSSL_ROOT_DIR=/opt/homebrew/opt/openssl/ \
       -DCMAKE_INSTALL_PREFIX:PATH="${PROJECT_ROOT}/tdlib" \
-      -DTd_DIR:PATH=$(greadlink -e ../td/lib/cmake/Td) ..
+      -DTd_DIR:PATH=$(readlink -e ../td/lib/cmake/Td) ..
 
 cmake --build . --target install
 
