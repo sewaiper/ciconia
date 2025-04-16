@@ -6,7 +6,7 @@
 
     <groupId>ru.sewaiper</groupId>
     <artifactId>ciconia</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>0.0.1-SNAPSHOT</version>
 
     <scm>
         <developerConnection>
@@ -165,6 +165,12 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-release-plugin</artifactId>
                 <version>3.1.1</version>
+                <configuration>
+                    <preparationGoals>clean package</preparationGoals>
+                    <localCheckout>true</localCheckout>
+                    <pushChanges>false</pushChanges>
+                    <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>
             </plugin>
         </plugins>
     </build>
